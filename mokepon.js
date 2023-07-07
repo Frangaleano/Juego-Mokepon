@@ -29,7 +29,7 @@ function seleccionarMascotaJugador() {
     sectionSeleccionarMascota.style.display = "none"
 
     let sectionSeleccionarAtaque = document.getElementById("seleccionar-ataque")
-    sectionSeleccionarAtaque.style.display = "block"
+    sectionSeleccionarAtaque.style.display = "flex"
 
     let inputHipodoge = document.getElementById("hipodoge")
     let inputCapipepo = document.getElementById("capipepo")
@@ -51,7 +51,6 @@ function seleccionarMascotaJugador() {
 }
 
 function seleccionarMascotaEnemigo() {
-
     let mascotaAleatorio = aleatorio(1, 3)
     let spanMascotaEnemigo = document.getElementById("mascotaEnemigo")
 
@@ -66,26 +65,21 @@ function seleccionarMascotaEnemigo() {
 }
 
 function ataqueFuego() {
-
     ataqueJugador = "FUEGO"
     ataqueAleatorioEnemigo()
 }
 
 function ataqueAgua() {
-
     ataqueJugador = "AGUA"
     ataqueAleatorioEnemigo()
 }
 
 function ataqueTierra() {
-
     ataqueJugador = "TIERRA"
     ataqueAleatorioEnemigo()
 }
 
 function ataqueAleatorioEnemigo() {
-
-
     ataqueAleatorio = aleatorio(1, 3)
     if (ataqueAleatorio == 1) {
         ataqueEnemigo = "FUEGO"
@@ -99,7 +93,6 @@ function ataqueAleatorioEnemigo() {
 }
 
 function combate() {
-
     let spanVidasJugador = document.getElementById("vidasJugador")
     let spanVidasEnemigo = document.getElementById("vidasEnemigo")
 
@@ -127,7 +120,6 @@ function combate() {
 }
 
 function revisionVidas() {
-
     if (vidasEnemigo == 0) {
         mensajeFinal("GANASTE EL COMBATE!")
     } else if (vidasJugador == 0) {
@@ -136,21 +128,25 @@ function revisionVidas() {
 }
 
 function crearMensaje(resultado) {
-    let sectionMensajes = document.getElementById("mensajes")
+    let sectionMensajes = document.getElementById("resultado")
+    let ataquesDelJugador = document.getElementById("ataques-del-jugador")
+    let ataquesDelEnemigo = document.getElementById("ataques-del-enemigo")
 
-    let parrafo = document.createElement("p")
-    parrafo.innerHTML = "Tu mascota atacó con " + ataqueJugador + ", la mascota del enemigo atacó con " + ataqueEnemigo + ", resultado: " + resultado
+    let nuevoAtaqueDelJugador = document.createElement("p")
+    let nuevoAtaqueDelEnemigo = document.createElement("p")
 
-    sectionMensajes.appendChild(parrafo)
+    sectionMensajes.innerHTML = resultado
+    nuevoAtaqueDelJugador.innerHTML = ataqueJugador
+    nuevoAtaqueDelEnemigo.innerHTML = ataqueEnemigo
+
+    ataquesDelJugador.appendChild(nuevoAtaqueDelJugador)
+    ataquesDelEnemigo.appendChild(nuevoAtaqueDelEnemigo)
 }
 
 function mensajeFinal(resultadoFinal) {
-    let sectionMensajes = document.getElementById("mensajes")
+    let sectionMensajes = document.getElementById("resultado")
 
-    let parrafo = document.createElement("p")
-    parrafo.innerHTML = resultadoFinal
-
-    sectionMensajes.appendChild(parrafo)
+    sectionMensajes.innerHTML = resultadoFinal
 
     let botonFuego = document.getElementById("boton-fuego")
     botonFuego.disabled = true
@@ -170,12 +166,9 @@ function reiniciarJuego() {
 }
 
 function aleatorio(min, max) {
-
     return Math.floor(Math.random() * (max - min + 1) + min)
 
 }
-
-
 
 window.addEventListener("load", iniciarJuego)
 

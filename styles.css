@@ -1,6 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Poppins:wght@300&family=Press+Start+2P&display=swap');
+
+body {
+    background-color: #041562;
+    font-family: 'Comfortaa', cursive;
+}
+
+#seleccionar-mascota {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .titulo {
-    color: hotpink;
-    width: 312px;
+    font-family: 'Press Start 2P', cursive;
+    padding: 10px;
+    color: white;
+    font-size: 80px;
+    border-radius: 20px;
+    border: solid lightblue;
+}
+
+.subtitulo {
+    margin-top: 10px;
+    color: white;
+    font-size: 40px;
+    font-family: 'Comfortaa', cursive;
+}
+
+.tarjetas {
+    display: flex;
+    flex-direction: row;
+}
+
+.tarjeta-de-mokepones {
+    width: 180px;
+    height: 100px;
+    background-color: #11468f;
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid lightblue;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ .tarjeta-de-mokepones p {
+    font-size: 20px;
+    color: white;
+    font-family: 'Comfortaa', cursive;
+ }
+
+ .tarjeta-de-mokepones img {
+    width: 100px;
+}
+
+#boton-mascota {
+    width: 180px;
+    height: 40px;
+    border-radius: 20px;
+    background: transparent;
+    margin-top: 20px;
+    border: 2px solid white;
+    color: white;
+    font-family: 'Comfortaa', cursive;
+    font-size: 20px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input {
+    display: none;
+}
+
+#seleccionar-ataque {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.botones-ataques {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.botones-ataque {
+    background-color: #11468f;
+    border-radius: 20px;
+    border: 2px solid lightblue;
+    padding: 20px;
+    font-size: 20px;
+    color: white;
+    font-family: 'Comfortaa', cursive;
+    margin: 20px 15px;
+    width: 190px;
     height: 50px;
-    background-color: teal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#mensajes {
+    width: 280px;
+    background-color: #11468f;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 20px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+#boton-reiniciar {
+    height: 40px;
+    width: 100px;
+    border-radius: 20px;
+    border: none;
+    color: #041562;
+    font-size: 15px;
+    font-family: 'Comfortaa', cursive;
+}
+
+.ataques {
+    display: grid;
+    grid-template-columns: 100px 100px;
 }
