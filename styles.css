@@ -19,6 +19,8 @@ body {
     font-size: 80px;
     border-radius: 20px;
     border: solid lightblue;
+    margin-top: 30px;
+    margin-bottom: 50px;
 }
 
 .subtitulo {
@@ -70,10 +72,15 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
 
 input {
     display: none;
+}
+
+input:checked + label{
+    background-color: #5D8DF4;
 }
 
 #seleccionar-ataque {
@@ -82,7 +89,7 @@ input {
     align-items: center;
 }
 
-.botones-ataques {
+.tarjetas-ataques {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -97,7 +104,7 @@ input {
     color: white;
     font-family: 'Comfortaa', cursive;
     margin: 20px 15px;
-    width: 190px;
+    width: 80px;
     height: 50px;
     display: flex;
     align-items: center;
@@ -130,4 +137,69 @@ input {
 .ataques {
     display: grid;
     grid-template-columns: 100px 100px;
+    gap: 50px;
+}
+
+#vidas-jugador, #vidas-enemigo {
+    font-size: 32px;
+    margin-bottom: 0;
+    color: white;
+}
+
+.ataque-jugador, .ataque-enemigo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+#vidasJugador, #vidasEnemigo {
+    font-size: 40px;
+    margin: 25px 0px;
+}
+
+#mascotaJugador, #mascotaEnemigo {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+@media (max-width: 360px) {
+
+    body {
+        margin: 0px;
+    }
+
+    .titulo {
+        font-size: 30px;
+    }
+
+    .subtitulo {
+        font-size: 20px;
+    }
+
+    .tarjetas, .tarjetas-ataques {
+        flex-direction: column;
+    }
+
+    .tarjeta-de-mokepones {
+        width: 120px;
+        height: 70px;
+    }
+
+    .tarjeta-de-mokepones p {
+        font-size: 15px;
+    }
+
+    .tarjeta-de-mokepones img {
+        width: 60px;
+    }
+
+    #boton-mascota {
+        width: 150px;
+    }
+
+    .botones-ataque {
+        margin-bottom: 10px;
+    }
+
 }
