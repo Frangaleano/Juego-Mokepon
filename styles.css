@@ -23,6 +23,17 @@ body {
     margin-bottom: 50px;
 }
 
+.tituloMapa {
+    font-family: 'Press Start 2P', cursive;
+    padding: 10px;
+    color: white;
+    font-size: 25px;
+    border: solid lightblue;
+    border-radius: 20px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
 .subtitulo {
     margin-top: 10px;
     color: white;
@@ -161,6 +172,16 @@ input:checked + label{
 #mascotaJugador, #mascotaEnemigo {
     font-size: 20px;
     margin-top: 10px;
+}
+
+#ver-mapa {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#mapa {
+    border: 2px solid white;
 }
 
 @media (max-width: 360px) {
