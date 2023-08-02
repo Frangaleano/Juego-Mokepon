@@ -24,14 +24,14 @@ body {
 }
 
 .tituloMapa {
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'Comfortaa', cursive;
     padding: 10px;
     color: white;
     font-size: 25px;
-    border: solid lightblue;
     border-radius: 20px;
     margin-top: 30px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 .subtitulo {
@@ -181,21 +181,39 @@ input:checked + label{
 }
 
 #mapa {
-    border: 2px solid white;
+    margin-bottom: 10px;
 }
 
-@media (max-width: 360px) {
+#ver-mapa button {
+    width: 120px;
+    height: 40px;
+    border-radius: 20px;
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    margin: 10px;
+}
+
+
+@media (max-width: 560px) {
 
     body {
-        margin: 0px;
+        padding: 0px;
     }
 
     .titulo {
         font-size: 30px;
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
 
     .subtitulo {
         font-size: 20px;
+    }
+
+    #contenedorTarjetas {
+        margin-top: 15px;
     }
 
     .tarjetas, .tarjetas-ataques {
@@ -220,7 +238,25 @@ input:checked + label{
     }
 
     .botones-ataque {
-        margin-bottom: 10px;
+        margin-bottom: 0px;
+    }
+
+    #mensajes { 
+        width: 230px;
+    }
+
+    #resultado {
+        font-size: 18px;
+    }
+
+}
+
+
+@media (max-width: 450px) {
+    #ver-mapa div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
 }
