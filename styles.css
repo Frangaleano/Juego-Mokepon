@@ -3,6 +3,11 @@
 body {
     background-color: #041562;
     font-family: 'Comfortaa', cursive;
+    margin-top: 50px;
+}
+
+#titulo-mokepon {
+    height: 160px;
 }
 
 #seleccionar-mascota {
@@ -10,17 +15,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.titulo {
-    font-family: 'Press Start 2P', cursive;
-    padding: 10px;
-    color: white;
-    font-size: 80px;
-    border-radius: 20px;
-    border: solid lightblue;
-    margin-top: 30px;
-    margin-bottom: 50px;
 }
 
 .tituloMapa {
@@ -59,13 +53,13 @@ body {
     align-items: center;
 }
 
- .tarjeta-de-mokepones p {
+.tarjeta-de-mokepones p {
     font-size: 20px;
     color: white;
     font-family: 'Comfortaa', cursive;
- }
+}
 
- .tarjeta-de-mokepones img {
+.tarjeta-de-mokepones img {
     width: 100px;
 }
 
@@ -90,7 +84,7 @@ input {
     display: none;
 }
 
-input:checked + label{
+input:checked+label {
     background-color: #5D8DF4;
 }
 
@@ -151,25 +145,29 @@ input:checked + label{
     gap: 50px;
 }
 
-#vidas-jugador, #vidas-enemigo {
+#vidas-jugador,
+#vidas-enemigo {
     font-size: 32px;
     margin-bottom: 0;
     color: white;
 }
 
-.ataque-jugador, .ataque-enemigo {
+.ataque-jugador,
+.ataque-enemigo {
     display: flex;
     flex-direction: column;
     align-items: center;
     color: white;
 }
 
-#vidasJugador, #vidasEnemigo {
+#vidasJugador,
+#vidasEnemigo {
     font-size: 40px;
     margin: 25px 0px;
 }
 
-#mascotaJugador, #mascotaEnemigo {
+#mascotaJugador,
+#mascotaEnemigo {
     font-size: 20px;
     margin-top: 10px;
 }
@@ -195,17 +193,30 @@ input:checked + label{
     margin: 10px;
 }
 
+@media (max-width: 750px) {
+
+    body {
+        padding: 10px;
+    }
+
+    .tarjeta-de-mokepones {
+        width: 140px;
+        height: 150px;
+        flex-direction: column-reverse;
+        
+    }
+
+}
 
 @media (max-width: 560px) {
 
     body {
         padding: 0px;
+        margin-top: 10px;
     }
 
-    .titulo {
-        font-size: 30px;
-        margin-top: 20px;
-        margin-bottom: 20px;
+    #titulo-mokepon {
+        height: 140px;
     }
 
     .subtitulo {
@@ -214,23 +225,30 @@ input:checked + label{
 
     #contenedorTarjetas {
         margin-top: 15px;
+        margin-bottom: 15px;
     }
 
-    .tarjetas, .tarjetas-ataques {
+    .tarjetas,
+    .tarjetas-ataques {
         flex-direction: column;
+        gap: 5px;
     }
 
     .tarjeta-de-mokepones {
-        width: 120px;
-        height: 70px;
+        width: 130px;
+        height: 140px;
     }
 
     .tarjeta-de-mokepones p {
-        font-size: 15px;
+        font-size: 20px;
     }
 
     .tarjeta-de-mokepones img {
-        width: 60px;
+        width: 80px;
+    }
+
+    #ver-mapa {
+        margin-top: 50px;
     }
 
     #boton-mascota {
@@ -241,7 +259,7 @@ input:checked + label{
         margin-bottom: 0px;
     }
 
-    #mensajes { 
+    #mensajes {
         width: 230px;
     }
 
@@ -251,12 +269,49 @@ input:checked + label{
 
 }
 
-
 @media (max-width: 450px) {
+    body {
+        margin-top: 10px;
+    }
+
+    #titulo-mokepon {
+        height: 120px;
+    }
+
+
     #ver-mapa div {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
+    .tarjeta-de-mokepones img {
+        width: 60px;
+    }
+}
+
+@media (max-width: 350px) {
+
+    body {
+        margin-top: 10px;
+    }
+
+    #titulo-mokepon {
+        height: 100px;
+    }
+
+    .tarjeta-de-mokepones {
+        height: 90px;
+    }
+
+    .tarjeta-de-mokepones img {
+        width: 60px;
+    }
+
+    .tarjetas-ataques {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 }
