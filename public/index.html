@@ -31,11 +31,11 @@
     <section id="ver-mapa">
         <h2 class="tituloMapa">Recorre el mapa con tu mokepon!</h2>
         <canvas id="mapa"></canvas>
-        <button onmouseup="detenerMovimiento()" onmousedown="moverMascotaArriba()">Arriba</button>
+        <button ontouchend="detenerMovimiento()" onmouseup="detenerMovimiento()" onmousedown="moverMascotaArriba()" ontouchstart="moverMascotaArriba()">Arriba</button>
         <div>
-            <button onmouseup="detenerMovimiento()" onmousedown="moverMascotaIzquierda()">Izquierda</button>
-            <button onmouseup="detenerMovimiento()" onmousedown="moverMascotaAbajo()">Abajo</button>
-            <button onmouseup="detenerMovimiento()" onmousedown="moverMascotaDerecha()">Derecha</button>
+            <button ontouchend="detenerMovimiento()" ontouchstart="moverMascotaIzquierda()" onmouseup="detenerMovimiento()" onmousedown="moverMascotaIzquierda()">Izquierda</button>
+            <button ontouchend="detenerMovimiento()" ontouchstart="moverMascotaAbajo()" onmouseup="detenerMovimiento()" onmousedown="moverMascotaAbajo()">Abajo</button>
+            <button ontouchend="detenerMovimiento()" ontouchstart="moverMascotaDerecha()" onmouseup="detenerMovimiento()" onmousedown="moverMascotaDerecha()">Derecha</button>
         </div>
     </section>
 

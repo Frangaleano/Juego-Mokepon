@@ -166,7 +166,7 @@ function iniciarJuego() {
 
 
 function unirseAlJuego() {
-    fetch("http://localhost:8080/unirse")
+    fetch("http://192.168.100.95:8080/unirse")
         .then(function (res) {
             if (res.ok) {
                 res.text()
@@ -180,10 +180,6 @@ function unirseAlJuego() {
 }
 
 function seleccionarMascotaJugador() {
-
-    sectionSeleccionarMascota.style.display = "none"
-
-
     if (inputHipodoge.checked) {
         spanMascotaJugador.innerHTML = inputHipodoge.id
         mascotaJugador = inputHipodoge.id
@@ -195,18 +191,23 @@ function seleccionarMascotaJugador() {
         mascotaJugador = inputRatigueya.id
     } else {
         alert("Debes seleccionar una mascota")
-    }
+        return
+    }   
+    
+
+    sectionSeleccionarMascota.style.display = "none"
 
     seleccionarMokepon(mascotaJugador)
 
     extraerAtaques(mascotaJugador)
+
     sectionVerMapa.style.display = "flex"
     iniciarMapa()
 
 }
 
 function seleccionarMokepon(mascotaJugador) {
-    fetch(`http://localhost:8080/mokepon/${jugadorId}`, {
+    fetch(`http://192.168.100.95:8080/mokepon/${jugadorId}`, {
         method: "post",
         headers: {
             "Content-type": "application/json"
@@ -271,7 +272,7 @@ function secuenciaAtaque() {
 }
 
 function enviarAtaques() {
-    fetch(`http://localhost:8080/mokepon/${jugadorId}/ataques`, {
+    fetch(`http://192.168.100.95:8080/mokepon/${jugadorId}/ataques`, {
         method: "post",
         headers: {
             "Content-Type": "application/json"
@@ -285,7 +286,7 @@ function enviarAtaques() {
 }
 
 function obtenerAtaques() {
-    fetch(`http://localhost:8080/mokepon/${enemigoId}/ataques`)
+    fetch(`http://192.168.100.95:8080/mokepon/${enemigoId}/ataques`)
         .then(function (res) {
             if(res.ok) {
                 res.json()
@@ -415,7 +416,7 @@ function pintarCanvas() {
 }
 
 function enviarPosicion(x, y) {
-    fetch(`http://localhost:8080/mokepon/${jugadorId}/posicion`, {
+    fetch(`http://192.168.100.95:8080/mokepon/${jugadorId}/posicion`, {
         method: "post",
         headers: {
             "Content-Type": "application/json"
